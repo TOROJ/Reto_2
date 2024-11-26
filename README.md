@@ -6,7 +6,7 @@ Por medio de los diagramas tipo UML vistos en clase, vamos a modelar un evento d
 ```mermaid
 classDiagram
    class Bicicleta{
-        +modelo
+        +modelo : modelo A
         +vehiculo
         +manubrio
         +mover ()
@@ -31,12 +31,14 @@ classDiagram
         }
         Bicicleta <-- Bici-usuario : interaccion
 
+   **El usuario (clase) interactua con la bicicleta (otra clase)**
+
 ## Reación de la bicicleta y sus componentes
 
 ```mermaid
 classDiagram
     class Bicicleta{
-        +modelo
+        +modelo : Modelo A
         +vehiculo
         +manubrio
         +mover ()
@@ -46,22 +48,22 @@ classDiagram
 
     class vehiculo {
         +Frenos
-        +Ruedas
+        +Ruedas  : llantas 
         +Transporta()
     }
-    class modelo {
-        +Color 
-        +longitud
-        +Tamaño
+    class Modelo A{
+        +Color    : Rojo
+        +longitud : 1,67m
+        +Tamaño   : 1,30m
     }
     vehiculo<|-- Bicicleta
-    Bicicleta--|> modelo
+    Bicicleta--|> Modelo A
     class manubrio {
         +manubrio
         + girar()
     }
     Bicicleta--* manubrio
-```mermaid
+```
     
     classDiagram
         class Bicicleta{
@@ -74,21 +76,23 @@ classDiagram
         }
     
         class vehiculo {
-            +Frenos
-            +Ruedas
+            +Frenos 
+            +Ruedas 
             +Transporta()
         }
-        class modelo {
+        class Modelo A{
             +Color 
             +longitud
             +Tamaño
         }
         vehiculo<|-- Bicicleta
-        Bicicleta--|> modelo
+        Bicicleta--|> Modelo A
         class manubrio {
             +manubrio
             + girar()
         }
         Bicicleta--* manubrio
+
+   ** la bicicleta es un vehiculo, lo cual hereda sus caracteristicas y acciones. la bicicleta es un modelo 
     
 
