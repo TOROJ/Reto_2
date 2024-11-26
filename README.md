@@ -93,6 +93,6 @@ classDiagram
         }
         Bicicleta--* manubrio
 
-   ** la bicicleta es un vehiculo, lo cual hereda sus caracteristicas y acciones. la bicicleta es un modelo 
+**La bicicleta es un vehiculo, lo cual hereda sus caracteristicas y acciones. la bicicleta es un modelo el cual hereda sus caracteristicas y acciones. la bicicleta tiene un manubrio que lo integra a su uso. La bicicleta termina siendo todos sus componentes que se mencionan, que los operará el bici-usuario.**
     
 
